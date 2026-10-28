@@ -9,32 +9,32 @@ def main():
 def collectWords():
     words = ""
     while True:
-        word = input("Insert word (empty stops): ")
+        word = input("Insert word(empty stops): ")
         if word == "":
             break
+        if words == "":
+            words = word
         else:
-            if words == "":
-                words = word
-            else:
-                words += DELIMITER + word
+            words += DELIMITER + word
     return words
 
 def analyseWords(Pwords):
-    wordList = Pwords.split(DELIMITER)
-    wordCounter = 0
-    charCounter = 0
-    for word in wordList:
-        wordCounter += 1
-        charCounter += len(word)
     if Pwords == "":
-        wordCounter = 0
-    print(f"- {wordCounter} words")
-    print(f"- {charCounter} Characters")
+        wordList = []
+    else:
+        wordList = Pwords.split(DELIMITER)
+
+    wordCounter = len(wordList)
+    charCounter = sum(len(word) for word in wordList)
+
     if wordCounter > 0:
         average = charCounter / wordCounter
     else:
         average = 0
-    print("- {:.2f} Average word length".format(average))
-    
+
+    print(f"- {wordCounter} Words")
+    print(f"- {charCounter} Characters")
+    print(f"- {average:.2f} Average word length")
+
 main()
 
