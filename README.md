@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # W5_7
 
 Create a Python program which collects words in a collectWords-function and analyses the words in a analyseWords-function. Use main-function to define the main logic.
@@ -57,3 +58,6 @@ Insert word(empty stops):
 - 5.25 Average word length
 Program ending.
 ````
+=======
+# Python_programming_W5_7
+>>>>>>> 277f16f24e7bc6a4cdcd384de16244f3865001a7
